@@ -3,7 +3,7 @@ import "./App.css";
 
 function App() {
   const dispatch = useDispatch();
-  const points = useSelector((state) => state.points);
+  const points = useSelector((state) => state.PointReducer.points);
 
   const addPoint = (point) => {
     dispatch({ type: "ADD_POINT", payload: point });
