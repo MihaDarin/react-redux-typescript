@@ -1,5 +1,6 @@
 import { useDispatch, useSelector } from "react-redux";
 import "./App.css";
+import { fetchCustomers } from "./asyncActions/customers";
 import {
   addCustomerAction,
   deleteCustomerAction,
@@ -34,6 +35,9 @@ function App() {
           Crush Point
         </button>
         <button onClick={() => addCustomer(prompt())}>Add Object</button>
+        <button onClick={() => dispatch(fetchCustomers())}>
+          Получить юзеров из базы
+        </button>
       </div>
       <div>
         {customers.length ? (
@@ -43,7 +47,7 @@ function App() {
                 onClick={() => {
                   deleteCustomer(customer);
                 }}
-                key={customer.id}
+                // key={customer.id}
               >
                 {customer.name}{" "}
               </div>
