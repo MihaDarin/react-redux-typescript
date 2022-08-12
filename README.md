@@ -1,0 +1,1 @@
+Изучаю связку React + Redux + Typescript
