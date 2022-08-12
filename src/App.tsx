@@ -1,9 +1,10 @@
-import React from 'react';
+import React from "react";
+import UserList from "./components/UserList";
 
 function App() {
   return (
-    <div >
-      Работает
+    <div>
+      <UserList />
     </div>
   );
 }
