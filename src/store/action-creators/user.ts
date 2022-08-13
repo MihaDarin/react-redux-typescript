@@ -6,12 +6,12 @@ export const FetchUsers = () => {
   return async (dispatch: Dispatch<userAction>) => {
     try {
       dispatch({ type: userActionTypes.FETCH_USERS });
-      const responce = await axios.get(
+      const response = await axios.get(
         "https://jsonplaceholder.typicode.com/users"
       );
       dispatch({
         type: userActionTypes.FETCH_USERS_SUCCESS,
-        payload: responce.data,
+        payload: response.data,
       });
     } catch (error) {
       dispatch({
